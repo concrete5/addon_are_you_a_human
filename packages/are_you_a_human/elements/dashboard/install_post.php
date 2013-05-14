@@ -2,10 +2,10 @@
 //var_dump($product);
 
 $captchaLink = '<a href="'.$this->url('/dashboard/system/permissions/captcha/').'" target="_blank">'.t('captcha configuration').'</a>';
+$docsLink = '<a href="http://www.concrete5.org/marketplace/addons/are_you_a_human/documentation/" target="_blank">'.t('documentation').'</a>';
+$ayahLink = '<a href="http://areyouahuman.com/" target="_blank">'.t('Are You A Human').'</a>';
 ?>
-<script type="text/javascript">
-window.location.href="<?=$this->url('/dashboard/system/permissions/captcha/','view',t('New captcha system installed.'))?>";
-</script>
 
-<h1><?= t('Are You Human') ?></h1>
-<h4><?= t('You installed the new captcha system. Go to the system %s to complete setup.',$captchaLink) ?></h4>
+<h2 style="margin-bottom:12px"><?= t('Are You Human') ?></h2>
+<p><?= t('You installed the new captcha system. Go to the system %s to complete setup.',$captchaLink) ?></p>
+<p><?= t('Check out our %s first if you want to learn more aobut how to get started with the %s captcha system.',$docsLink,$ayahLink) ?></p>

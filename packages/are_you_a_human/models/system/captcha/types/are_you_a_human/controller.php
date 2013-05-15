@@ -7,8 +7,12 @@ class AreYouAHumanSystemCaptchaTypeController extends SystemCaptchaTypeControlle
 		Loader::library('3rdparty/ayah/ayah', 'are_you_a_human');
 		Loader::model('package');
 		$this->pkg = Package::getByHandle('are_you_a_human');
-		define('AYAH_PUBLISHER_KEY', $this->pkg->config('ARE_YOU_A_HUMAN_PUBLISHER_KEY'));
-		define('AYAH_SCORING_KEY',   $this->pkg->config('ARE_YOU_A_HUMAN_SCORING_KEY'));
+		if (!defined('AYAH_PUBLISHER_KEY')) {
+			define('AYAH_PUBLISHER_KEY', $this->pkg->config('ARE_YOU_A_HUMAN_PUBLISHER_KEY'));
+		}
+		if (!defined('AYAH_SCORING_KEY')) {
+			define('AYAH_SCORING_KEY',   $this->pkg->config('ARE_YOU_A_HUMAN_SCORING_KEY'));
+		}
 		$this->ayah = new AYAH;
 	}
 

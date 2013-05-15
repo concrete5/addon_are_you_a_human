@@ -1,4 +1,4 @@
-addon_are_you_a_human
+Are You a Human Captcha
 =====================
 
 Are you human captcha addon for concrete5

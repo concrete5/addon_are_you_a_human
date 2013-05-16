@@ -1,5 +1,4 @@
 <?defined('C5_EXECUTE') or die(_("Access Denied."));
-//var_dump($product);
 
 $captchaLink = '<a href="'.$this->url('/dashboard/system/permissions/captcha/').'" target="_blank">'.t('captcha configuration').'</a>';
 $docsLink = '<a href="http://www.concrete5.org/marketplace/addons/are_you_a_human/documentation/" target="_blank">'.t('documentation').'</a>';

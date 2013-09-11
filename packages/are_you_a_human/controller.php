@@ -5,7 +5,7 @@ class AreYouAHumanPackage extends Package {
 
 	protected $pkgHandle = "are_you_a_human";
 	protected $appVersionRequired = "5.5";
-	protected $pkgVersion = "0.9.2";
+	protected $pkgVersion = "1.0.1";
 
 	public function getPackageName() {
 		return t('Are You A Human');

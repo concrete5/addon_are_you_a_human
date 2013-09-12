@@ -23,7 +23,14 @@ class AreYouAHumanSystemCaptchaTypeController extends SystemCaptchaTypeControlle
 
 	public function display() {
 		$page = Page::getCurrentPage();
-		if (is_object($page) && $page->isEditMode()) {
+		if (
+		    !is_object($page)
+		    ||
+		    $page->isEditMode()
+		    ||
+		    // We don't display in stack view for lightbox
+		    strpos($page->getCollectionPath(), '/!stacks/') === 0
+		) {
 			echo '<div class="ccm-edit-mode-disabled-item" style="width: 360px; height: 50px"><div style="margin: 15px auto;">' . t('Captcha is disabled in edit mode.') . '</div></div>';
 			return;
 		}

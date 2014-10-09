@@ -9,19 +9,15 @@ $docsLink = '<a href="http://www.concrete5.org/marketplace/addons/are_you_a_huma
         'documentation') . '</a>';
 ?>
 
-<div class="clearfix">
+<div class="form-group">
     <?= $form->label('ARE_YOU_A_HUMAN_PUBLISHER_KEY', t('Publisher Key')) ?>
-    <div class="input">
-        <?= $form->text('ARE_YOU_A_HUMAN_PUBLISHER_KEY', $pkg->getConfig()->get('token.publisher_key')) ?>
-    </div>
+    <?= $form->text('ARE_YOU_A_HUMAN_PUBLISHER_KEY', $pkg->getConfig()->get('token.publisher_key')) ?>
 </div>
 
 
-<div class="clearfix">
+<div class="form-group">
     <?= $form->label('ARE_YOU_A_HUMAN_SCORING_KEY', t('Scoring Key')) ?>
-    <div class="input">
-        <?= $form->text('ARE_YOU_A_HUMAN_SCORING_KEY', $pkg->getConfig()->get('token.scoring_key')) ?>
-    </div>
+    <?= $form->text('ARE_YOU_A_HUMAN_SCORING_KEY', $pkg->getConfig()->get('token.scoring_key')) ?>
 </div>
 
 <div class="well">

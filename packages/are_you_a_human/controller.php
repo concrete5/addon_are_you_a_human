@@ -8,8 +8,8 @@ class Controller extends \Concrete\Core\Package\Package
 {
 
     protected $pkgHandle = "are_you_a_human";
-    protected $appVersionRequired = "5.5";
-    protected $pkgVersion = "1.0.1";
+    protected $appVersionRequired = "5.7.1";
+    protected $pkgVersion = "2.0.0";
 
     public function getPackageName()
     {

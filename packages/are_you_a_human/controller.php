@@ -1,23 +1,30 @@
 <?php
-defined('C5_EXECUTE') or die(_("Access Denied."));
+namespace Concrete\Package\AreYouAHuman;
 
-class AreYouAHumanPackage extends Package {
+use Concrete\Core\Captcha\Library;
+use Concrete\Core\Foundation\ClassLoader;
 
-	protected $pkgHandle = "are_you_a_human";
-	protected $appVersionRequired = "5.5";
-	protected $pkgVersion = "1.0.1";
+class Controller extends \Concrete\Core\Package\Package
+{
 
-	public function getPackageName() {
-		return t('Are You A Human');
-	}
+    protected $pkgHandle = "are_you_a_human";
+    protected $appVersionRequired = "5.5";
+    protected $pkgVersion = "1.0.1";
 
-	public function getPackageDescription() {
-		return t('Are You A Human? Captcha');
-	}
-	
-	public function install() {
-		$pkg = parent::install();
-		Loader::model('system/captcha/library');
-		SystemCaptchaLibrary::add('are_you_a_human', t('Are You A Human'), $pkg);
-	}
+    public function getPackageName()
+    {
+        return t('Are You A Human');
+    }
+
+    public function getPackageDescription()
+    {
+        return t('Are You A Human? Captcha');
+    }
+
+    public function install()
+    {
+        $pkg = parent::install();
+        Library::add('are_you_a_human', t('Are You A Human'), $pkg);
+    }
+
 }

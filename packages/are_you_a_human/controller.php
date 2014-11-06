@@ -13,7 +13,7 @@ class Controller extends \Concrete\Core\Package\Package
 
     public function getPackageName()
     {
-        return t('Are You A Human');
+        return t('PortlandLabs Are You A Human');
     }
 
     public function getPackageDescription()
